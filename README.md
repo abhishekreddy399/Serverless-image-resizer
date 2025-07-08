@@ -82,11 +82,12 @@ Upload resizeImage.zip and save
 
 
 🌐 How It Works
-1.Frontend calls an API to get a pre-signed S3 URL
-2.User uploads an image directly to S3 using that URL
-3.Upload triggers the resize Lambda
-4.Lambda resizes the image using sharp and saves it to a second bucket
-5.Frontend gets the URL of the resized image to display or download
+
+-Frontend calls an API to get a pre-signed S3 URL
+-User uploads an image directly to S3 using that URL
+-Upload triggers the resize Lambda
+-Lambda resizes the image using sharp and saves it to a second bucket
+-Frontend gets the URL of the resized image to display or download
 
 
 
