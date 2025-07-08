@@ -1,0 +1,178 @@
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --success: #4cc9f0;
+  --danger: #f72585;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7ff;
+  color: var(--dark);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: var(--primary);
+  background: rgba(67, 97, 238, 0.05);
+}
+
+.upload-area.active {
+  border-color: var(--success);
+  background: rgba(76, 201, 240, 0.05);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="number"], input[type="file"] {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.download-btn {
+  margin-top: 1rem;
+  background-color: var(--success);
+}
+
+.download-btn:hover {
+  background-color: #3aa8d0;
+}
+
+.preview {
+  margin-top: 2rem;
+  text-align: center;
+  display: none;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  display: none;
+}
+
+.status.success {
+  background-color: rgba(76, 201, 240, 0.2);
+  color: #0a9396;
+  display: block;
+}
+
+.status.error {
+  background-color: rgba(247, 37, 133, 0.2);
+  color: #ae2012;
+  display: block;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  margin: 1rem 0;
+  display: none;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: var(--success);
+  border-radius: 5px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
